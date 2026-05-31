@@ -1,0 +1,27 @@
+{
+  "name": "claude-copilot-extension",
+  "displayName": "Claude Copilot",
+  "description": "VS Code extension with Claude AI models - Free tier with daily/monthly quota",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": ["AI", "Programming Languages", "Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src",
+    "dev": "npm run watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.84.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0"
+  }
+}
